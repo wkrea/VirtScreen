@@ -1,3 +1,32 @@
+Mi instalaqción fedora
+
+### Dependencias
+```
+sudo dnf install flex bison
+sudo dnf install gcc g++ libguestfs-tools-c libvirt libvirt-devel libxml2-devel libxslt-devel make ruby-devel
+sudo dnf install https://releases.hashicorp.com/vagrant/2.2.10/vagrant_2.2.10_x86_64.rpm
+cd /tmp/; wget http://vault.centos.org/8.2.2004/BaseOS/Source/SPackages/krb5-1.17-18.el8.src.rpm
+rpm2cpio krb5-1.17-18.el8.src.rpm | cpio -imdV
+tar xf krb5-1.17.tar.gz
+cd krb5-1.17/src
+LDFLAGS='-L/opt/vagrant/embedded/' ./configure
+make
+sudo cp lib/libk5crypto.so.3 /opt/vagrant/embedded/lib64/
+sudo cp lib/libk5crypto.so.3 /lib64/libk5crypto.so.3
+```
+
+#### appimagetool
+descargar la aplicación en la ruta `VirtScreen-master/package/appimage/`
+https://github.com/AppImage/AppImageKit
+
+#### Crear la aplicación portable (AppImage)
+```bash
+./build.sh
+./appimagetool-x86_64.AppImage virtscreen.AppDir/
+```
+### ejecutar :D
+
+
 <h1 align="center">
   <img src="data/icon_full.svg" width="21%">
   <br/>
