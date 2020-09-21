@@ -26,6 +26,7 @@ https://github.com/AppImage/AppImageKit
 ```
 ### ejecutar :D
 Crear el archivo y reiniciar (linux+kde)
+~~~
 [dell@localhost appimage]$ cat /usr/share/X11/xorg.conf.d/20-intel.conf 
 Section "Device"
     Identifier "intelgpu0"
@@ -34,7 +35,7 @@ Section "Device"
     Option "NoAccel" "True"
     Option "VirtualHeads" "1"
 EndSection
-
+~~~
 
 ## Referencias Utiles
 * https://github.com/wkrea/virtual-display-linux
