@@ -25,6 +25,21 @@ https://github.com/AppImage/AppImageKit
 ./appimagetool-x86_64.AppImage virtscreen.AppDir/
 ```
 ### ejecutar :D
+Crear el archivo y reiniciar (linux+kde)
+[dell@localhost appimage]$ cat /usr/share/X11/xorg.conf.d/20-intel.conf 
+Section "Device"
+    Identifier "intelgpu0"
+    Driver "intel"
+    Option "DRI" "False"
+    Option "NoAccel" "True"
+    Option "VirtualHeads" "1"
+EndSection
+
+
+## Referencias Utiles
+* https://github.com/wkrea/virtual-display-linux
+* https://en.wikipedia.org/wiki/List_of_common_resolutions
+* https://github.com/vagrant-libvirt/vagrant-libvirt/issues/1127
 
 
 <h1 align="center">
